@@ -1,0 +1,448 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		120E215221108B5A000BF4D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E215121108B5A000BF4D9 /* AppDelegate.swift */; };
+		120E215421108B5A000BF4D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E215321108B5A000BF4D9 /* ViewController.swift */; };
+		120E215721108B5A000BF4D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 120E215521108B5A000BF4D9 /* Main.storyboard */; };
+		120E215921108B60000BF4D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 120E215821108B60000BF4D9 /* Assets.xcassets */; };
+		120E215C21108B60000BF4D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 120E215A21108B60000BF4D9 /* LaunchScreen.storyboard */; };
+		1230059421122718000D3A60 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1230059321122718000D3A60 /* ExerciseViewController.swift */; };
+		12300598211231E3000D3A60 /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12300597211231E3000D3A60 /* Advice.swift */; };
+		9B105C7B90FF0A32EAAE69F9 /* Pods_Relaxi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3ACA1A533BE5AE387F2D50E /* Pods_Relaxi.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		00BB66A4D5F3778288992A5D /* Pods-Relaxi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Relaxi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Relaxi/Pods-Relaxi.debug.xcconfig"; sourceTree = "<group>"; };
+		120E214E21108B5A000BF4D9 /* Relaxi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Relaxi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		120E215121108B5A000BF4D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		120E215321108B5A000BF4D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		120E215621108B5A000BF4D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		120E215821108B60000BF4D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		120E215B21108B60000BF4D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		120E215D21108B60000BF4D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1230059321122718000D3A60 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
+		12300597211231E3000D3A60 /* Advice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advice.swift; sourceTree = "<group>"; };
+		94C2E84F6D8765B6C4BD5CD7 /* Pods-Relaxi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Relaxi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Relaxi/Pods-Relaxi.release.xcconfig"; sourceTree = "<group>"; };
+		B3ACA1A533BE5AE387F2D50E /* Pods_Relaxi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Relaxi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		120E214B21108B5A000BF4D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B105C7B90FF0A32EAAE69F9 /* Pods_Relaxi.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		120E214521108B5A000BF4D9 = {
+			isa = PBXGroup;
+			children = (
+				120E215021108B5A000BF4D9 /* Relaxi */,
+				120E214F21108B5A000BF4D9 /* Products */,
+				CA6F5E8DABAB883D2088E831 /* Pods */,
+				77D702936C23A14D6E1B7485 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		120E214F21108B5A000BF4D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				120E214E21108B5A000BF4D9 /* Relaxi.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		120E215021108B5A000BF4D9 /* Relaxi */ = {
+			isa = PBXGroup;
+			children = (
+				120E215121108B5A000BF4D9 /* AppDelegate.swift */,
+				123005922112247D000D3A60 /* Data Model */,
+				1230058E211223E4000D3A60 /* Controllers */,
+				1230058F21122404000D3A60 /* Views */,
+				1230059121122431000D3A60 /* Supporting Files */,
+				120E215D21108B60000BF4D9 /* Info.plist */,
+			);
+			path = Relaxi;
+			sourceTree = "<group>";
+		};
+		1230058E211223E4000D3A60 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1230059321122718000D3A60 /* ExerciseViewController.swift */,
+				120E215321108B5A000BF4D9 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1230058F21122404000D3A60 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				120E215521108B5A000BF4D9 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1230059121122431000D3A60 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				120E215821108B60000BF4D9 /* Assets.xcassets */,
+				120E215A21108B60000BF4D9 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		123005922112247D000D3A60 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				12300597211231E3000D3A60 /* Advice.swift */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		77D702936C23A14D6E1B7485 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3ACA1A533BE5AE387F2D50E /* Pods_Relaxi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA6F5E8DABAB883D2088E831 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00BB66A4D5F3778288992A5D /* Pods-Relaxi.debug.xcconfig */,
+				94C2E84F6D8765B6C4BD5CD7 /* Pods-Relaxi.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		120E214D21108B5A000BF4D9 /* Relaxi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 120E216021108B60000BF4D9 /* Build configuration list for PBXNativeTarget "Relaxi" */;
+			buildPhases = (
+				2CC053AD948D0EC6081C5C02 /* [CP] Check Pods Manifest.lock */,
+				120E214A21108B5A000BF4D9 /* Sources */,
+				120E214B21108B5A000BF4D9 /* Frameworks */,
+				120E214C21108B5A000BF4D9 /* Resources */,
+				FBA65E2FCBCD94827EB5B7B4 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Relaxi;
+			productName = Relaxi;
+			productReference = 120E214E21108B5A000BF4D9 /* Relaxi.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		120E214621108B5A000BF4D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Anya Kundakchian";
+				TargetAttributes = {
+					120E214D21108B5A000BF4D9 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 120E214921108B5A000BF4D9 /* Build configuration list for PBXProject "Relaxi" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 120E214521108B5A000BF4D9;
+			productRefGroup = 120E214F21108B5A000BF4D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				120E214D21108B5A000BF4D9 /* Relaxi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		120E214C21108B5A000BF4D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				120E215C21108B60000BF4D9 /* LaunchScreen.storyboard in Resources */,
+				120E215921108B60000BF4D9 /* Assets.xcassets in Resources */,
+				120E215721108B5A000BF4D9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CC053AD948D0EC6081C5C02 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Relaxi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBA65E2FCBCD94827EB5B7B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Relaxi/Pods-Relaxi-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Relaxi/Pods-Relaxi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		120E214A21108B5A000BF4D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				120E215421108B5A000BF4D9 /* ViewController.swift in Sources */,
+				1230059421122718000D3A60 /* ExerciseViewController.swift in Sources */,
+				120E215221108B5A000BF4D9 /* AppDelegate.swift in Sources */,
+				12300598211231E3000D3A60 /* Advice.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		120E215521108B5A000BF4D9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				120E215621108B5A000BF4D9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		120E215A21108B60000BF4D9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				120E215B21108B60000BF4D9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		120E215E21108B60000BF4D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		120E215F21108B60000BF4D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		120E216121108B60000BF4D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00BB66A4D5F3778288992A5D /* Pods-Relaxi.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Relaxi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.anyakundakchian.Relaxi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		120E216221108B60000BF4D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94C2E84F6D8765B6C4BD5CD7 /* Pods-Relaxi.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Relaxi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.anyakundakchian.Relaxi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		120E214921108B5A000BF4D9 /* Build configuration list for PBXProject "Relaxi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				120E215E21108B60000BF4D9 /* Debug */,
+				120E215F21108B60000BF4D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		120E216021108B60000BF4D9 /* Build configuration list for PBXNativeTarget "Relaxi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				120E216121108B60000BF4D9 /* Debug */,
+				120E216221108B60000BF4D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 120E214621108B5A000BF4D9 /* Project object */;
+}
