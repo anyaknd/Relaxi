@@ -7,11 +7,19 @@
 //
 
 import Foundation
-import RealmSwift
 
-class Advice: Object {
+class Advice {
     
-    @objc dynamic var adviceText : String = ""
-    @objc dynamic var adviceLiked : Bool = false
+    let adviceText : String
+    let adviceLiked : Bool
+    let category : String
     
+    //created an initialiser method that determines the initial values of these 2 properties, that will be passed on through the parameters when we create our Advice objects
+    init(text: String, isLiked: Bool, belongsTo: String) {
+        adviceText = text
+        adviceLiked = isLiked
+        category = belongsTo
+    }
+    
+
 }
