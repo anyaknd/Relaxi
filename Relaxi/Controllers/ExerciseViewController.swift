@@ -10,9 +10,9 @@ import UIKit
 
 class ExerciseViewController: UIViewController {
 
-    let allAdvice = AdviceBank()
+    let allAdvice = ExerciseBank()
     
-    //this variable tracks the state of our app
+    //this variable tracks the of exercise screen
     var adviceNumber : Int = 0
 
     @IBOutlet weak var textView: UITextView!
@@ -44,12 +44,14 @@ class ExerciseViewController: UIViewController {
         nextAdvice()
     }
     
+    
+    
     //MARK:- Navigate between Advices Methods
     
     
     func nextAdvice() {
 
-        if adviceNumber >= 0  && adviceNumber <= 3 {
+        if adviceNumber >= 0  && adviceNumber <= 5 {
             
             //changes the advice text on advice label and category at the top label to the next advice
             textView.text = allAdvice.list[adviceNumber].adviceText
@@ -70,12 +72,20 @@ class ExerciseViewController: UIViewController {
             present(alert, animated: true, completion: nil)
         }
     }
-    
-    
-    
+
     func startOver() {
         adviceNumber = 0
         nextAdvice()
     }
+    
+    //MARK :- Rating Functionality
+    
+//    @IBAction func onePressed(_ sender: UIButton) {
+//        
+//        let adviceRated = allAdvice.list[adviceNumber]
+//    
+//        
+//    }
+//    
     
 }

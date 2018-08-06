@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         
     }
 
+    //MARK:- Buttons Pressed
     @IBAction func exerciseButtonPressed(_ sender: UIButton) {
         
         performSegue(withIdentifier: "goToExerciseVC", sender: self)
@@ -24,28 +25,19 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func foodButtonPressed(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "goToFoodVC", sender: self)
+        
+    }
+    
+    @IBAction func meditationButtonPressed(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "goToMeditationVC", sender: self)
+        
+    }
+    
+    
 }
 
-
-
-//creating a new advice object and adding it to our realm database
-//        let advice1 = Advice()
-//        advice1.adviceText = "Stretch"
-//        advice1.adviceLiked = false
-//        saveAdvice(advice: advice1)
-//
-//        let advice2 = Advice()
-//        advice2.adviceText = "Do some Yoga"
-//        advice2.adviceLiked = false
-//        saveAdvice(advice: advice2)
-//
-//        let advice3 = Advice()
-//        advice3.adviceText = "Dance"
-//        advice3.adviceLiked = false
-//        saveAdvice(advice: advice3)
-//
-//        let advice4 = Advice()
-//        advice4.adviceText = "Breathe"
-//        advice4.adviceLiked = false
-//        saveAdvice(advice: advice4)
 

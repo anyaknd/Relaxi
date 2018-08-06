@@ -47,6 +47,10 @@
                                 <state key="normal" title="FOOD">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="foodButtonPressed:" destination="NaO-7a-Qa5" eventType="touchUpInside" id="v9y-yw-Mpy"/>
+                                    <segue destination="U9i-gS-DPt" kind="push" identifier="goToFoodVC" id="E5L-Ff-hsd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0H-yZ-rn8">
                                 <rect key="frame" x="45" y="408" width="120" height="120"/>
@@ -55,6 +59,10 @@
                                 <state key="normal" title="MEDITATION">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="meditationButtonPressed:" destination="NaO-7a-Qa5" eventType="touchUpInside" id="lAS-yT-dVr"/>
+                                    <segue destination="rZO-De-6bw" kind="push" identifier="goToMeditationVC" id="ETl-bB-PXE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBJ-rg-Sg4">
                                 <rect key="frame" x="210" y="408" width="120" height="120"/>
@@ -64,14 +72,9 @@
                                 <state key="normal" title="THOUGHTS LOG">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuX-T3-Atj">
-                                <rect key="frame" x="0.0" y="627" width="170" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.22599476669999999" green="0.47466844229999999" blue="0.60025380709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="💭 Quote of the day">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <connections>
+                                    <segue destination="3iF-yv-SvK" kind="push" id="kSE-8r-rEc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8md-qu-VZ0">
                                 <rect key="frame" x="211" y="627" width="164" height="40"/>
@@ -90,23 +93,236 @@
             </objects>
             <point key="canvasLocation" x="129" y="7"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Nz6-uG-vQ4">
+        <!--Food View Controller-->
+        <scene sceneID="iTA-Pu-ltd">
             <objects>
-                <viewController id="3Cc-SE-4TP" sceneMemberID="viewController">
+                <viewController id="U9i-gS-DPt" customClass="FoodViewController" customModule="Relaxi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6gH-U8-Kt5"/>
-                        <viewControllerLayoutGuide type="bottom" id="YBX-eF-Qlf"/>
+                        <viewControllerLayoutGuide type="top" id="X9c-MG-9na"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rul-kb-LVv"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="pah-rg-0Bb">
+                    <view key="view" contentMode="scaleToFill" id="ldp-rm-aD0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Food Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQb-0z-bKr">
+                                <rect key="frame" x="16" y="110" width="343" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P9z-49-eiw">
+                                <rect key="frame" x="16" y="182" width="343" height="311"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83137254900000002" green="0.80000000000000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">When it comes to stress and anxiety, peppermint tea is one of your best allies. The menthol that is naturally present in the herb is a known muscle relaxant; this physical manifestation of relaxation can translate to stress and anxiety relief as well. Try sipping a cup of peppermint tea and listening to your favorite song for a five-minute break during a hectic afternoon to get the most out of this benefit.</string>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duZ-T6-x8t">
+                                <rect key="frame" x="16" y="501" width="100" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.64548068579999995" green="0.53569878469999999" blue="0.8713378906" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Previous">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="previousButtonPressed:" destination="ZdR-zN-E1u" eventType="touchUpInside" id="3Cx-m3-vnq"/>
+                                    <action selector="previousButtonPressed:" destination="U9i-gS-DPt" eventType="touchUpInside" id="BCc-S0-XIh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXQ-pJ-P0E">
+                                <rect key="frame" x="259" y="501" width="100" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.64548068579999995" green="0.53569878469999999" blue="0.8713378906" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="U9i-gS-DPt" eventType="touchUpInside" id="RIx-iO-nsx"/>
+                                    <action selector="nextButtonPressed:" destination="ZdR-zN-E1u" eventType="touchUpInside" id="S2g-VS-R7L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZC-Zt-PY6">
+                                <rect key="frame" x="211" y="627" width="164" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.22599476669999999" green="0.47466844229999999" blue="0.60025380709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="⭐ Add to Favourites">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="favouritesButtonPressed:" destination="ZdR-zN-E1u" eventType="touchUpInside" id="Vgl-ay-f98"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.83137254900000002" green="0.80000000000000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="7GS-Zg-Mcx"/>
+                    <connections>
+                        <outlet property="textLabel" destination="yQb-0z-bKr" id="L9s-Xp-hrc"/>
+                        <outlet property="textView" destination="P9z-49-eiw" id="3QO-ff-Olb"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BqP-6r-6od" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y0Q-AE-z4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="663" y="186"/>
+            <point key="canvasLocation" x="751" y="31"/>
+        </scene>
+        <!--Thoughts-->
+        <scene sceneID="1Uu-0K-eHG">
+            <objects>
+                <tableViewController id="3iF-yv-SvK" customClass="ThoughtTableViewController" customModule="Relaxi" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SGq-la-ofu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ThoughtsLogCell" rowHeight="124" id="1Rf-AH-JBd">
+                                <rect key="frame" x="0.0" y="28" width="375" height="124"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Rf-AH-JBd" id="drJ-SB-hif">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="123.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3iF-yv-SvK" id="SKS-38-Uu3"/>
+                            <outlet property="delegate" destination="3iF-yv-SvK" id="nPc-cR-FnR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Thoughts" id="5Uw-vb-Mst">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="sS7-Qc-XMh">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="3iF-yv-SvK" id="9GJ-wr-5uq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QWZ-BQ-ZzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="822"/>
+        </scene>
+        <!--Meditation View Controller-->
+        <scene sceneID="3F7-1G-YXh">
+            <objects>
+                <viewController id="rZO-De-6bw" customClass="MeditationViewController" customModule="Relaxi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cJT-dT-wF7"/>
+                        <viewControllerLayoutGuide type="bottom" id="LO6-Q5-aIy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FTh-8a-u7D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meditation Technique" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kda-7n-rvJ">
+                                <rect key="frame" x="16" y="110" width="343" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gLf-Bc-X1y">
+                                <rect key="frame" x="16" y="182" width="343" height="369"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83137254900000002" green="0.80000000000000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Counting Backwards with a twist. \nPick a big number like 637 and then pick an odd, random number, for example 19 and start counting backwards to zero from 637 by 19. \nFocused efforts to actually try and do that math engage your brain in a way, that can distract from the stress and flooding emotions you may be experiencing, and help you relax.</string>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHx-o9-gzp">
+                                <rect key="frame" x="16" y="559" width="100" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.64548068579999995" green="0.53569878469999999" blue="0.8713378906" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Previous">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="previousButtonPressed:" destination="rZO-De-6bw" eventType="touchUpInside" id="9ik-ze-i2Z"/>
+                                    <action selector="previousButtonPressed:" destination="ZdR-zN-E1u" eventType="touchUpInside" id="9o5-Ss-kw7"/>
+                                    <action selector="previousButtonPressed:" destination="U9i-gS-DPt" eventType="touchUpInside" id="WMP-eD-hSE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mvh-H0-ZSh">
+                                <rect key="frame" x="211" y="627" width="164" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.22599476669999999" green="0.47466844229999999" blue="0.60025380709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="⭐ Add to Favourites">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="favouritesButtonPressed:" destination="ZdR-zN-E1u" eventType="touchUpInside" id="CJK-Bk-fGN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VsA-Qv-VSn">
+                                <rect key="frame" x="259" y="559" width="100" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.64548068579999995" green="0.53569878469999999" blue="0.8713378906" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="rZO-De-6bw" eventType="touchUpInside" id="aBm-v3-dhb"/>
+                                    <action selector="nextButtonPressed:" destination="ZdR-zN-E1u" eventType="touchUpInside" id="fhB-Qz-fwb"/>
+                                    <action selector="nextButtonPressed:" destination="U9i-gS-DPt" eventType="touchUpInside" id="skk-u0-Tan"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83137254900000002" green="0.80000000000000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sYw-Og-hZe"/>
+                    <connections>
+                        <outlet property="textLabel" destination="kda-7n-rvJ" id="Wkc-FN-3gj"/>
+                        <outlet property="textView" destination="gLf-Bc-X1y" id="YNX-1l-bOp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nTs-w9-HO5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762.5" y="838.5"/>
+        </scene>
+        <!--Thought Detail-->
+        <scene sceneID="DlP-Nt-h9e">
+            <objects>
+                <viewController id="eTZ-wd-fUD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mY8-sR-7an"/>
+                        <viewControllerLayoutGuide type="bottom" id="TIL-gL-jWb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rjg-lD-3DH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XDT-8V-B89">
+                                <rect key="frame" x="16" y="72" width="343" height="575"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Thought Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="33o-BX-8n0">
+                                        <rect key="frame" x="8" y="8" width="327" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Thought Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ylk-kG-Fgl">
+                                        <rect key="frame" x="8" y="46" width="327" height="239"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83137254900000002" green="0.80000000000000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Thought Detail" id="uAy-if-3X0">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="fIe-nv-bBC"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I5f-fQ-oPz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="1590"/>
         </scene>
         <!--Exercise View Controller-->
         <scene sceneID="pTv-ze-LU7">
@@ -120,19 +336,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ExerciseType" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f64-QA-ieK">
-                                <rect key="frame" x="95" y="110" width="184" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exercise Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f64-QA-ieK">
+                                <rect key="frame" x="16" y="110" width="343" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VjG-1C-dMF">
-                                <rect key="frame" x="16" y="197" width="343" height="272"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VjG-1C-dMF">
+                                <rect key="frame" x="16" y="182" width="343" height="311"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.83137254900000002" green="0.80000000000000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Lie on your back on the floor and put your feet up against the wall. This Vipariti Kirani yoga pose involves lying on the floor and resting the legs up against a wall. Not only does it give the body a good stretch, but it helps create peace of mind, too.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVX-YM-PWP">
@@ -146,14 +362,6 @@
                                     <action selector="previousButtonPressed:" destination="ZdR-zN-E1u" eventType="touchUpInside" id="oy5-t8-dqe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KaB-3o-M6s">
-                                <rect key="frame" x="212" y="627" width="164" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.22599476669999999" green="0.47466844229999999" blue="0.60025380709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="⭐ Add to Favourites">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9P-Cg-hlh">
                                 <rect key="frame" x="259" y="501" width="100" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -165,6 +373,69 @@
                                     <action selector="nextButtonPressed:" destination="ZdR-zN-E1u" eventType="touchUpInside" id="AtJ-Hd-aVk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxn-Ci-B70">
+                                <rect key="frame" x="71" y="627" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.22599476669999999" green="0.47466844229999999" blue="0.60025380709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="favouritesButtonPressed:" destination="ZdR-zN-E1u" eventType="touchUpInside" id="1zA-F9-0GX"/>
+                                    <action selector="onePressed:" destination="ZdR-zN-E1u" eventType="touchUpInside" id="CrF-ji-I5D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkm-kT-BHd">
+                                <rect key="frame" x="119" y="627" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.22599476669999999" green="0.47466844229999999" blue="0.60025380709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="favouritesButtonPressed:" destination="ZdR-zN-E1u" eventType="touchUpInside" id="RmO-9t-R7j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fur-dA-blU">
+                                <rect key="frame" x="167" y="627" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.22599476669999999" green="0.47466844229999999" blue="0.60025380709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="favouritesButtonPressed:" destination="ZdR-zN-E1u" eventType="touchUpInside" id="hRL-r2-wvR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ky0-2z-iB5">
+                                <rect key="frame" x="215" y="627" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.22599476669999999" green="0.47466844229999999" blue="0.60025380709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="4">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="favouritesButtonPressed:" destination="ZdR-zN-E1u" eventType="touchUpInside" id="rVK-FU-Eza"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apu-GS-Jry">
+                                <rect key="frame" x="263" y="627" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.22599476669999999" green="0.47466844229999999" blue="0.60025380709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="5">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="favouritesButtonPressed:" destination="ZdR-zN-E1u" eventType="touchUpInside" id="884-IA-ncz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How relaxed do you feel after this exercise?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtZ-42-C7n">
+                                <rect key="frame" x="17" y="583" width="340" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" red="0.22599476669999999" green="0.47466844229999999" blue="0.60025380709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.83137254900000002" green="0.80000000000000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -176,7 +447,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JyX-mi-g7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="663" y="-658"/>
+            <point key="canvasLocation" x="751" y="-716"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0v3-DS-cjA">

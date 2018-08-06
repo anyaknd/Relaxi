@@ -12,9 +12,15 @@
 		120E215721108B5A000BF4D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 120E215521108B5A000BF4D9 /* Main.storyboard */; };
 		120E215921108B60000BF4D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 120E215821108B60000BF4D9 /* Assets.xcassets */; };
 		120E215C21108B60000BF4D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 120E215A21108B60000BF4D9 /* LaunchScreen.storyboard */; };
+		122FC3E42117291400F90450 /* FoodBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122FC3E32117291400F90450 /* FoodBank.swift */; };
+		122FC3E621172B7100F90450 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122FC3E521172B7100F90450 /* FoodViewController.swift */; };
+		122FC3E82117311F00F90450 /* MeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122FC3E72117311F00F90450 /* MeditationViewController.swift */; };
+		122FC3EA2117315200F90450 /* MeditationBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122FC3E92117315200F90450 /* MeditationBank.swift */; };
 		1230059421122718000D3A60 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1230059321122718000D3A60 /* ExerciseViewController.swift */; };
 		12300598211231E3000D3A60 /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12300597211231E3000D3A60 /* Advice.swift */; };
-		123A8EBE21131FDB000CC7EB /* AdviceBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A8EBD21131FDB000CC7EB /* AdviceBank.swift */; };
+		123A8EBE21131FDB000CC7EB /* ExerciseBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A8EBD21131FDB000CC7EB /* ExerciseBank.swift */; };
+		123A8EC021133754000CC7EB /* Thought.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A8EBF21133754000CC7EB /* Thought.swift */; };
+		123A8EC221133A1E000CC7EB /* ThoughtTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A8EC121133A1E000CC7EB /* ThoughtTableViewController.swift */; };
 		9B105C7B90FF0A32EAAE69F9 /* Pods_Relaxi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3ACA1A533BE5AE387F2D50E /* Pods_Relaxi.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,9 +33,15 @@
 		120E215821108B60000BF4D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		120E215B21108B60000BF4D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		120E215D21108B60000BF4D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		122FC3E32117291400F90450 /* FoodBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBank.swift; sourceTree = "<group>"; };
+		122FC3E521172B7100F90450 /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
+		122FC3E72117311F00F90450 /* MeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MeditationViewController.swift; path = Relaxi/Controllers/MeditationViewController.swift; sourceTree = SOURCE_ROOT; };
+		122FC3E92117315200F90450 /* MeditationBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationBank.swift; sourceTree = "<group>"; };
 		1230059321122718000D3A60 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		12300597211231E3000D3A60 /* Advice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advice.swift; sourceTree = "<group>"; };
-		123A8EBD21131FDB000CC7EB /* AdviceBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceBank.swift; sourceTree = "<group>"; };
+		123A8EBD21131FDB000CC7EB /* ExerciseBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseBank.swift; sourceTree = "<group>"; };
+		123A8EBF21133754000CC7EB /* Thought.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thought.swift; sourceTree = "<group>"; };
+		123A8EC121133A1E000CC7EB /* ThoughtTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ThoughtTableViewController.swift; path = Relaxi/Controllers/ThoughtTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		94C2E84F6D8765B6C4BD5CD7 /* Pods-Relaxi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Relaxi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Relaxi/Pods-Relaxi.release.xcconfig"; sourceTree = "<group>"; };
 		B3ACA1A533BE5AE387F2D50E /* Pods_Relaxi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Relaxi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -80,8 +92,11 @@
 		1230058E211223E4000D3A60 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1230059321122718000D3A60 /* ExerciseViewController.swift */,
 				120E215321108B5A000BF4D9 /* ViewController.swift */,
+				1230059321122718000D3A60 /* ExerciseViewController.swift */,
+				122FC3E521172B7100F90450 /* FoodViewController.swift */,
+				122FC3E72117311F00F90450 /* MeditationViewController.swift */,
+				123A8EC121133A1E000CC7EB /* ThoughtTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -107,7 +122,10 @@
 			isa = PBXGroup;
 			children = (
 				12300597211231E3000D3A60 /* Advice.swift */,
-				123A8EBD21131FDB000CC7EB /* AdviceBank.swift */,
+				123A8EBD21131FDB000CC7EB /* ExerciseBank.swift */,
+				122FC3E32117291400F90450 /* FoodBank.swift */,
+				122FC3E92117315200F90450 /* MeditationBank.swift */,
+				123A8EBF21133754000CC7EB /* Thought.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -224,12 +242,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Relaxi/Pods-Relaxi-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
@@ -247,9 +267,15 @@
 			files = (
 				120E215421108B5A000BF4D9 /* ViewController.swift in Sources */,
 				1230059421122718000D3A60 /* ExerciseViewController.swift in Sources */,
+				122FC3E82117311F00F90450 /* MeditationViewController.swift in Sources */,
 				120E215221108B5A000BF4D9 /* AppDelegate.swift in Sources */,
+				123A8EC021133754000CC7EB /* Thought.swift in Sources */,
+				122FC3E621172B7100F90450 /* FoodViewController.swift in Sources */,
 				12300598211231E3000D3A60 /* Advice.swift in Sources */,
-				123A8EBE21131FDB000CC7EB /* AdviceBank.swift in Sources */,
+				122FC3E42117291400F90450 /* FoodBank.swift in Sources */,
+				123A8EBE21131FDB000CC7EB /* ExerciseBank.swift in Sources */,
+				123A8EC221133A1E000CC7EB /* ThoughtTableViewController.swift in Sources */,
+				122FC3EA2117315200F90450 /* MeditationBank.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

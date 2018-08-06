@@ -8,5 +8,6 @@ target 'Relaxi' do
 
 pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
 pod 'RealmSwift'
+pod 'Charts'
 
 end

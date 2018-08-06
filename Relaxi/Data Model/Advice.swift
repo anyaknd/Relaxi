@@ -11,7 +11,7 @@ import Foundation
 class Advice {
     
     let adviceText : String
-    let adviceLiked : Bool
+    var adviceLiked : Bool
     let category : String
     
     //created an initialiser method that determines the initial values of these 2 properties, that will be passed on through the parameters when we create our Advice objects
