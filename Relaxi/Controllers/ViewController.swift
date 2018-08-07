@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     
     @IBAction func insightsButtonPressed(_ sender: UIButton) {
         
-        performSegue(withIdentifier: "goToInsightsVC", sender: self)
+        performSegue(withIdentifier: "goToSelectCategory", sender: self)
         
     }
     

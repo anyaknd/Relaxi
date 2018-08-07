@@ -20,25 +20,13 @@ class InsightsViewController: UIViewController {
     var upperBodyStretchDataEntry = PieChartDataEntry(value: 0)
     var yogaOneDataEntry = PieChartDataEntry(value: 0)
     var yogaTwoDataEntry = PieChartDataEntry(value: 0)
-    var danceDataEntry = PieChartDataEntry(value: 0)
-    var bellyBreathingDataEntry = PieChartDataEntry(value: 0)
-    var countBackwardDataEntry = PieChartDataEntry(value: 0)
-    var simpleMeditationDataEntry = PieChartDataEntry(value: 0)
-    var mantraDataEntry = PieChartDataEntry(value: 0)
-    var emptyMindDataEntry = PieChartDataEntry(value: 0)
-    var walkingMeditationDataEntry = PieChartDataEntry(value: 0)
-    
-//    var lowerBodyStretch : Int = 0
-//    var upperBodyStretch : Int = 0
-//    var yogaOne : Int = 0
-//    var yogaTwo : Int = 0
-//    var dance : Int = 0
-//    var bellyBreathing : Int = 0
-//    var countBackward : Int = 0
-//    var simpleMeditation : Int = 0
-//    var mantra : Int = 0
-//    var emptyMind : Int = 0
-//    var walkingMeditation : Int = 0
+//    var danceDataEntry = PieChartDataEntry(value: 0)
+//    var bellyBreathingDataEntry = PieChartDataEntry(value: 0)
+//    var countBackwardDataEntry = PieChartDataEntry(value: 0)
+//    var simpleMeditationDataEntry = PieChartDataEntry(value: 0)
+//    var mantraDataEntry = PieChartDataEntry(value: 0)
+//    var emptyMindDataEntry = PieChartDataEntry(value: 0)
+//    var walkingMeditationDataEntry = PieChartDataEntry(value: 0)
     
     var dataEntries = [PieChartDataEntry]()
     
@@ -51,42 +39,45 @@ class InsightsViewController: UIViewController {
         
         //print("Total number of objects is \(ratings?.count)")
         
-        guard let total = ratings?.count else {fatalError()}
-            
-            let lowerBodyCount = ratings?.filter("ratingName contains 'Lower Body Stretch'").count
-            //print(lowerBodyratings?.count)
-            
-            let upperBodyCount = ratings?.filter("ratingName contains 'Upper Body Stretch'").count
-            let yogaOneCount = ratings?.filter("ratingName contains 'Yoga 1'").count
-            let yogaTwoCount = ratings?.filter("ratingName contains 'Yoga 2'").count
-            let danceCount = ratings?.filter("ratingName contains 'Dance'")
-            let bellyBreathingCount = ratings?.filter("ratingName contains 'Belly Breathing'")
-            let countBackwardCount = ratings?.filter("ratingName contains 'Count Backward'")
-            let simpleMeditationCount = ratings?.filter("ratingName contains 'Simple Meditation'")
-            let mantraCount = ratings?.filter("ratingName contains 'Mantra Meditation'")
-            let emptyMindCount = ratings?.filter("ratingName contains 'Empty Mind Meditation'")
-            let walkingMeditationCount = ratings?.filter("ratingName contains 'Walking Meditation'")
+        //guard let total = ratings?.count else {fatalError()}
         
-        print(ratings?[1])
+        
+        // Realm objects filtered by name
+        let lowerBodyCount = ratings?.filter("ratingName contains 'Lower Body Stretch'")
+        let upperBodyCount = ratings?.filter("ratingName contains 'Upper Body Stretch'")
+        let yogaOneCount = ratings?.filter("ratingName contains 'Yoga 1'")
+        let yogaTwoCount = ratings?.filter("ratingName contains 'Yoga 2'")
+//        let danceCount = ratings?.filter("ratingName contains 'Dance'")
+//        let bellyBreathingCount = ratings?.filter("ratingName contains 'Belly Breathing'")
+//        let countBackwardCount = ratings?.filter("ratingName contains 'Count Backward'")
+//        let simpleMeditationCount = ratings?.filter("ratingName contains 'Simple Meditation'")
+//        let mantraCount = ratings?.filter("ratingName contains 'Mantra Meditation'")
+//        let emptyMindCount = ratings?.filter("ratingName contains 'Empty Mind Meditation'")
+//        let walkingMeditationCount = ratings?.filter("ratingName contains 'Walking Meditation'")
+        
+        let lowerBodyAverageRating = average(exerciseCount: lowerBodyCount)
+        let upperBodyAverageRating = average(exerciseCount: upperBodyCount)
+        let yogaOneAverageRating = average(exerciseCount: yogaOneCount)
+        let yogaTwoAverageRating = average(exerciseCount: yogaTwoCount)
         
         pieChart.chartDescription?.text = "Most relaxing"
-
+        
         //values for data entries
-        lowerBodyStretchDataEntry.value = Double(lowerBodyCount!)
-        lowerBodyStretchDataEntry.label = "Lower"
+        lowerBodyStretchDataEntry.value = lowerBodyAverageRating
+        lowerBodyStretchDataEntry.label = "LB"
 
-        upperBodyStretchDataEntry.value = Double(upperBodyCount!)
-        upperBodyStretchDataEntry.label = "Upper"
+        upperBodyStretchDataEntry.value = upperBodyAverageRating
+        upperBodyStretchDataEntry.label = "UB"
 
-        yogaOneDataEntry.value = Double(yogaOneCount!)
-        yogaOneDataEntry.label = "Yoga 1"
+        yogaOneDataEntry.value = yogaOneAverageRating
+        yogaOneDataEntry.label = "Y1"
 
-        yogaTwoDataEntry.value = Double(yogaTwoCount!)
-        yogaTwoDataEntry.label = "Yoga 2"
+        yogaTwoDataEntry.value = yogaTwoAverageRating
+        yogaTwoDataEntry.label = "Y2"
 
 
         //data entries
-        dataEntries = [lowerBodyStretchDataEntry, upperBodyStretchDataEntry, yogaOneDataEntry, yogaTwoDataEntry, danceDataEntry, bellyBreathingDataEntry, countBackwardDataEntry, simpleMeditationDataEntry, mantraDataEntry, emptyMindDataEntry, walkingMeditationDataEntry]
+        dataEntries = [lowerBodyStretchDataEntry, upperBodyStretchDataEntry, yogaOneDataEntry, yogaTwoDataEntry]
 
         updateChartData()
     }
@@ -102,4 +93,54 @@ class InsightsViewController: UIViewController {
         pieChart.data = chartData
 
     }
+    
+    func average(exerciseCount : Results<Rating>?) -> Double {
+        
+        let entry1 = exerciseCount?.filter("rated == 1").count
+        let entry2 = exerciseCount?.filter("rated == 2").count
+        let entry3 = exerciseCount?.filter("rated == 3").count
+        let entry4 = exerciseCount?.filter("rated == 4").count
+        let entry5 = exerciseCount?.filter("rated == 5").count
+        
+        let value1 = (Double(entry1!) * 0.2)/(Double(ratings!.count))
+        let value2 = (Double(entry2!) * 0.4)/(Double(ratings!.count))
+        let value3 = (Double(entry3!) * 0.6)/(Double(ratings!.count))
+        let value4 = (Double(entry4!) * 0.8)/(Double(ratings!.count))
+        let value5 = (Double(entry5!) * 1)/(Double(ratings!.count))
+        
+        let average = (value1 + value2 + value3 + value4 + value5) * 10
+        
+        return average
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

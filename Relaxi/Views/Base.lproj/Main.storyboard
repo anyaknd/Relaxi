@@ -85,7 +85,7 @@
                                 </state>
                                 <connections>
                                     <action selector="insightsButtonPressed:" destination="NaO-7a-Qa5" eventType="touchUpInside" id="woG-58-WmB"/>
-                                    <segue destination="BbW-0M-UY1" kind="push" identifier="goToInsightsVC" id="PEH-cJ-Nee"/>
+                                    <segue destination="gsf-Ex-W4o" kind="push" identifier="goToSelectCategory" id="7Al-n4-UUZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -191,18 +191,18 @@
                                 <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sf2-7K-WmN" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="210" width="343" height="437"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Here are the exercises that make you feel relaxed the most" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="T8i-TH-nUx">
-                                <rect key="frame" x="67" y="179" width="240" height="85"/>
+                                <rect key="frame" x="67" y="149" width="240" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sf2-7K-WmN" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="34" y="280" width="307" height="313"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.83137254900000002" green="0.80000000000000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -213,7 +213,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ws7-0A-wkU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-346.5" y="821.5"/>
+            <point key="canvasLocation" x="-925" y="1561"/>
+        </scene>
+        <!--Select Category View Controller-->
+        <scene sceneID="rT4-MJ-KDB">
+            <objects>
+                <viewController id="gsf-Ex-W4o" customClass="SelectCategoryViewController" customModule="Relaxi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S1n-uc-HXt"/>
+                        <viewControllerLayoutGuide type="bottom" id="h9p-xr-zWf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a2I-Qu-oNL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5e-T7-Yh4">
+                                <rect key="frame" x="43" y="273" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.64548068579999995" green="0.53569878469999999" blue="0.8713378906" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="EXERCISE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exerciseButtonPressed:" destination="gsf-Ex-W4o" eventType="touchUpInside" id="SHy-68-dTM"/>
+                                    <segue destination="BbW-0M-UY1" kind="push" identifier="goToExerciseInsights" id="CdQ-ro-I4n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5q-sI-kdf">
+                                <rect key="frame" x="211" y="273" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.64548068579999995" green="0.53569878469999999" blue="0.8713378906" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="MEDITATION">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aku-Yo-0og">
+                                <rect key="frame" x="92" y="142" width="190" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83066220550000003" green="0.8000303459" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JZN-Cf-OJ0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z3A-IZ-cZL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-316" y="827"/>
         </scene>
         <!--Thoughts-->
         <scene sceneID="1Uu-0K-eHG">

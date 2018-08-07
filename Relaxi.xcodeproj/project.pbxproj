@@ -21,6 +21,7 @@
 		123A8EBE21131FDB000CC7EB /* ExerciseBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A8EBD21131FDB000CC7EB /* ExerciseBank.swift */; };
 		123A8EC021133754000CC7EB /* Thought.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A8EBF21133754000CC7EB /* Thought.swift */; };
 		123A8EC221133A1E000CC7EB /* ThoughtTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A8EC121133A1E000CC7EB /* ThoughtTableViewController.swift */; };
+		126AAC412119D2ED003518AA /* SelectCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126AAC402119D2ED003518AA /* SelectCategoryViewController.swift */; };
 		12D5F3302118850700D93B1F /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D5F32F2118850700D93B1F /* Rating.swift */; };
 		12D5F33221188AAE00D93B1F /* InsightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D5F33121188AAE00D93B1F /* InsightsViewController.swift */; };
 		9B105C7B90FF0A32EAAE69F9 /* Pods_Relaxi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3ACA1A533BE5AE387F2D50E /* Pods_Relaxi.framework */; };
@@ -44,6 +45,7 @@
 		123A8EBD21131FDB000CC7EB /* ExerciseBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseBank.swift; sourceTree = "<group>"; };
 		123A8EBF21133754000CC7EB /* Thought.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thought.swift; sourceTree = "<group>"; };
 		123A8EC121133A1E000CC7EB /* ThoughtTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ThoughtTableViewController.swift; path = Relaxi/Controllers/ThoughtTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		126AAC402119D2ED003518AA /* SelectCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectCategoryViewController.swift; path = Relaxi/Controllers/SelectCategoryViewController.swift; sourceTree = SOURCE_ROOT; };
 		12D5F32F2118850700D93B1F /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		12D5F33121188AAE00D93B1F /* InsightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsViewController.swift; sourceTree = "<group>"; };
 		94C2E84F6D8765B6C4BD5CD7 /* Pods-Relaxi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Relaxi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Relaxi/Pods-Relaxi.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				120E215321108B5A000BF4D9 /* ViewController.swift */,
+				126AAC402119D2ED003518AA /* SelectCategoryViewController.swift */,
 				12D5F33121188AAE00D93B1F /* InsightsViewController.swift */,
 				1230059321122718000D3A60 /* ExerciseViewController.swift */,
 				122FC3E521172B7100F90450 /* FoodViewController.swift */,
@@ -273,6 +276,7 @@
 			files = (
 				12D5F3302118850700D93B1F /* Rating.swift in Sources */,
 				120E215421108B5A000BF4D9 /* ViewController.swift in Sources */,
+				126AAC412119D2ED003518AA /* SelectCategoryViewController.swift in Sources */,
 				1230059421122718000D3A60 /* ExerciseViewController.swift in Sources */,
 				122FC3E82117311F00F90450 /* MeditationViewController.swift in Sources */,
 				12D5F33221188AAE00D93B1F /* InsightsViewController.swift in Sources */,
