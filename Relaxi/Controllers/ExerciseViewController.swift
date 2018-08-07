@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ExerciseViewController: UIViewController {
+
+    let realm = try! Realm()
+    
+    var ratings : Results<Rating>?
 
     let allAdvice = ExerciseBank()
     
@@ -44,8 +49,6 @@ class ExerciseViewController: UIViewController {
         nextAdvice()
     }
     
-    
-    
     //MARK:- Navigate between Advices Methods
     
     
@@ -78,14 +81,66 @@ class ExerciseViewController: UIViewController {
         nextAdvice()
     }
     
-    //MARK :- Rating Functionality
+    //MARK:- Rating Functionality
     
-//    @IBAction func onePressed(_ sender: UIButton) {
-//        
-//        let adviceRated = allAdvice.list[adviceNumber]
-//    
-//        
-//    }
-//    
+    @IBAction func onePressed(_ sender: UIButton) {
+        
+        let newRating = Rating()
+        newRating.ratingName = allAdvice.list[adviceNumber].category
+        newRating.rated = 1
+        save(rating: newRating)
+
+    }
+    
+    
+    @IBAction func twoPressed(_ sender: UIButton) {
+        
+        let newRating = Rating()
+        newRating.ratingName = allAdvice.list[adviceNumber].category
+        newRating.rated = 2
+        save(rating: newRating)
+        
+    }
+    
+    @IBAction func threePressed(_ sender: UIButton) {
+        
+        let newRating = Rating()
+        newRating.ratingName = allAdvice.list[adviceNumber].category
+        newRating.rated = 3
+        save(rating: newRating)
+        
+    }
+    
+    @IBAction func fourPressed(_ sender: UIButton) {
+        
+        let newRating = Rating()
+        newRating.ratingName = allAdvice.list[adviceNumber].category
+        newRating.rated = 4
+        save(rating: newRating)
+        
+    }
+    
+    
+    @IBAction func fivePressed(_ sender: UIButton) {
+        
+        let newRating = Rating()
+        newRating.ratingName = allAdvice.list[adviceNumber].category
+        newRating.rated = 5
+        save(rating: newRating)
+        
+    }
+    
+    
+    //MARK:- Saving ratings
+    func save(rating: Rating) {
+        
+        do {
+            try realm.write {
+                realm.add(rating)
+            }
+        } catch {
+            print(error)
+        }
+    }
     
 }

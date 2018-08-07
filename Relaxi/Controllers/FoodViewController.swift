@@ -71,12 +71,6 @@ class FoodViewController: UIViewController {
         }
     }
     
-    func likeAdvice() {
-        
-        allFood.list[foodNumber].adviceLiked = true
-        
-    }
-    
     
     
     func startOver() {
